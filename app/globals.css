@@ -4,24 +4,23 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-rgb: 255, 255, 255;
+}
+
+.dark {
+  --foreground-rgb: 255, 255, 255;
+  --background-rgb: 0, 0, 0;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: rgb(var(--background-rgb));
 }
 
 .neo-brutalist-box {
-  @apply border-4 border-black shadow-[8px_8px_0_0_#000];
+  @apply border-4 border-text-light dark:border-text-dark shadow-[8px_8px_0_0_theme(colors.text.light)] dark:shadow-[8px_8px_0_0_theme(colors.text.dark)];
 }
 
 .neo-brutalist-button {
-  @apply font-brutalist py-2 px-4 bg-neon-green text-black border-4 border-black shadow-[4px_4px_0_0_#000] hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-none transition-all;
+  @apply font-mono py-2 px-4 border-4 border-text-light dark:border-text-dark shadow-[4px_4px_0_0_theme(colors.text.light)] dark:shadow-[4px_4px_0_0_theme(colors.text.dark)] hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-none transition-all;
 }

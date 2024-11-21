@@ -6,17 +6,22 @@ const config: Config = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        'neon-green': '#39FF14',
-        'hot-pink': '#FF69B4',
-        'electric-blue': '#00FFFF',
-        'bright-yellow': '#FFFF00',
-        'deep-purple': '#800080',
+        'primary': '#7888ff',
+        'background': {
+          light: '#ffffff',
+          dark: '#000000',
+        },
+        'text': {
+          light: '#000000',
+          dark: '#ffffff',
+        },
       },
       fontFamily: {
-        'brutalist': ['Arial Black', 'Arial', 'sans-serif'],
+        'mono': ['Roboto Mono', 'monospace'],
       },
     },
   },

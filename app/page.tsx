@@ -47,19 +47,19 @@ export default function Home() {
           height={200}
           className="rounded-full neo-brutalist-box mb-8"
         />
-        <h1 className="text-6xl font-bold mb-4 bg-bright-yellow p-4 neo-brutalist-box">Alvin Mutebi</h1>
-        <p className="text-2xl mb-8 bg-electric-blue p-2 neo-brutalist-box">Software Developer | Web3 Enthusiast | Blockchain Expert</p>
+        <h1 className="text-6xl font-bold mb-4 bg-primary p-4 neo-brutalist-box text-text-dark">Alvin Mutebi</h1>
+        <p className="text-2xl mb-8 bg-background-light dark:bg-background-dark p-2 neo-brutalist-box text-text-light dark:text-text-dark">Software Developer | Web3 Enthusiast | Blockchain Expert</p>
         <div className="flex space-x-4">
-          <a href="https://github.com/alvienzo720" target="_blank" rel="noopener noreferrer" className="text-black hover:text-hot-pink">
+          <a href="https://github.com/alvienzo720" target="_blank" rel="noopener noreferrer" className="text-text-light dark:text-text-dark hover:text-primary">
             <Github size={32} />
           </a>
-          <a href="https://linkedin.com/in/alvin-mutebi-a5356815b" target="_blank" rel="noopener noreferrer" className="text-black hover:text-hot-pink">
+          <a href="https://linkedin.com/in/alvin-mutebi-a5356815b" target="_blank" rel="noopener noreferrer" className="text-text-light dark:text-text-dark hover:text-primary">
             <Linkedin size={32} />
           </a>
-          <a href="mailto:mutebialvinalvienzo@gmail.com" className="text-black hover:text-hot-pink">
+          <a href="mailto:mutebialvinalvienzo@gmail.com" className="text-text-light dark:text-text-dark hover:text-primary">
             <Mail size={32} />
           </a>
-          <a href="tel:+256786829438" className="text-black hover:text-hot-pink">
+          <a href="tel:+256786829438" className="text-text-light dark:text-text-dark hover:text-primary">
             <Phone size={32} />
           </a>
         </div>
@@ -67,7 +67,7 @@ export default function Home() {
 
       <motion.section 
         id="about" 
-        className="neo-brutalist-box bg-hot-pink p-8"
+        className="neo-brutalist-box bg-primary p-8 text-text-dark"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
@@ -84,7 +84,7 @@ export default function Home() {
 
       <motion.section 
         id="experience" 
-        className="neo-brutalist-box bg-electric-blue p-8"
+        className="neo-brutalist-box bg-background-light dark:bg-background-dark p-8 text-text-light dark:text-text-dark"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
@@ -92,7 +92,7 @@ export default function Home() {
       >
         <h2 className="text-4xl font-bold mb-4">Work Experience</h2>
         <div className="space-y-8">
-          <div className="neo-brutalist-box bg-bright-yellow p-4">
+          <div className="neo-brutalist-box bg-primary p-4 text-text-dark">
             <h3 className="text-2xl font-bold">Web3 Trainer</h3>
             <p className="text-lg">Code3Camp | January 2024 - August 2024</p>
             <ul className="list-disc list-inside mt-2">
@@ -102,7 +102,7 @@ export default function Home() {
               <li>Conducted hands-on workshops on blockchain technologies</li>
             </ul>
           </div>
-          <div className="neo-brutalist-box bg-neon-green p-4">
+          <div className="neo-brutalist-box bg-primary p-4 text-text-dark">
             <h3 className="text-2xl font-bold">Software Developer</h3>
             <p className="text-lg">Ngeni Labs | January 2023 - August 2024</p>
             <ul className="list-disc list-inside mt-2">
@@ -117,7 +117,7 @@ export default function Home() {
 
       <motion.section 
         id="projects" 
-        className="neo-brutalist-box bg-deep-purple text-white p-8"
+        className="neo-brutalist-box bg-primary p-8 text-text-dark"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
@@ -125,7 +125,7 @@ export default function Home() {
       >
         <h2 className="text-4xl font-bold mb-4">Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="neo-brutalist-box bg-hot-pink p-4">
+          <div className="neo-brutalist-box bg-background-light dark:bg-background-dark p-4 text-text-light dark:text-text-dark">
             <Image
               src="/placeholder.svg?height=200&width=300"
               alt="Bybit Trading Bot"
@@ -136,7 +136,7 @@ export default function Home() {
             <h3 className="text-2xl font-bold mb-2">Bybit Trading Bot</h3>
             <p>Efficient trading bot developed for Bybit using TypeScript, Express, and Node.js.</p>
           </div>
-          <div className="neo-brutalist-box bg-electric-blue p-4">
+          <div className="neo-brutalist-box bg-background-light dark:bg-background-dark p-4 text-text-light dark:text-text-dark">
             <Image
               src="/placeholder.svg?height=200&width=300"
               alt="Blockchain Student Database"
@@ -152,7 +152,7 @@ export default function Home() {
 
       <motion.section 
         id="contact" 
-        className="neo-brutalist-box bg-bright-yellow p-8"
+        className="neo-brutalist-box bg-background-light dark:bg-background-dark p-8 text-text-light dark:text-text-dark"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
@@ -162,17 +162,17 @@ export default function Home() {
         <form className="space-y-4" onSubmit={handleSubmit}>
           <div>
             <label htmlFor="name" className="block mb-1 font-bold">Name</label>
-            <input type="text" id="name" name="name" className="w-full p-2 neo-brutalist-box" required />
+            <input type="text" id="name" name="name" className="w-full p-2 neo-brutalist-box bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark" required />
           </div>
           <div>
             <label htmlFor="email" className="block mb-1 font-bold">Email</label>
-            <input type="email" id="email" name="email" className="w-full p-2 neo-brutalist-box" required />
+            <input type="email" id="email" name="email" className="w-full p-2 neo-brutalist-box bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark" required />
           </div>
           <div>
             <label htmlFor="message" className="block mb-1 font-bold">Message</label>
-            <textarea id="message" name="message" rows={4} className="w-full p-2 neo-brutalist-box" required></textarea>
+            <textarea id="message" name="message" rows={4} className="w-full p-2 neo-brutalist-box bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark" required></textarea>
           </div>
-          <button type="submit" className="neo-brutalist-button">Send Message</button>
+          <button type="submit" className="neo-brutalist-button bg-primary text-text-dark hover:bg-opacity-80">Send Message</button>
         </form>
         {formStatus && <p className="mt-4 text-center font-bold">{formStatus}</p>}
       </motion.section>
