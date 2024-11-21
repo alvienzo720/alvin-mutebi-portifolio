@@ -6,7 +6,7 @@ export async function POST(req: Request) {
   const { name, email, message } = body
 
   const transporter = nodemailer.createTransport({
-    host: "smtp.example.com",
+    host: "smtp.gmail.com",
     port: 587,
     secure: false, // Use TLS
     auth: {
@@ -18,7 +18,7 @@ export async function POST(req: Request) {
   try {
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
-      to: "your-email@example.com", // Your email address
+      to: "mutebialvinalvienzo@gmail.com",
       subject: `New message from ${name}`,
       text: `From: ${name} (${email})\n\nMessage: ${message}`,
     })
