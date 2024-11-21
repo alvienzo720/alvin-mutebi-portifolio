@@ -3,10 +3,11 @@
 import Image from 'next/image'
 import { Github, Linkedin, Mail, Phone } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 
 export default function Home() {
   const [formStatus, setFormStatus] = useState('')
+  const formRef = useRef<HTMLFormElement>(null)
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -18,15 +19,27 @@ export default function Home() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body),
-      })
+      });
+
+      // Log the full response for debugging
+      console.log('Response status:', response.status);
+      console.log('Response ok:', response.ok);
+
+      // Parse the response body to get more details
+      const responseBody = await response.text();
+      console.log('Response body:', responseBody);
 
       if (response.ok) {
         setFormStatus('Message sent successfully!')
-        e.currentTarget.reset()
+        // Reset form using ref instead of e.currentTarget
+        formRef.current?.reset()
       } else {
-        setFormStatus('Failed to send message. Please try again.')
+        // Log the error response and set a more informative status
+        setFormStatus(`Failed to send message. Status: ${response.status}. ${responseBody}`)
       }
     } catch (error) {
+      // Log the actual error for more details
+      console.error('Submission error:', error);
       setFormStatus('An error occurred. Please try again later.')
     }
   }
@@ -159,7 +172,11 @@ export default function Home() {
         viewport={{ once: true }}
       >
         <h2 className="text-4xl font-bold mb-4">Contact Me</h2>
-        <form className="space-y-4" onSubmit={handleSubmit}>
+        <form 
+          ref={formRef} 
+          className="space-y-4" 
+          onSubmit={handleSubmit}
+        >
           <div>
             <label htmlFor="name" className="block mb-1 font-bold">Name</label>
             <input type="text" id="name" name="name" className="w-full p-2 neo-brutalist-box bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark" required />
