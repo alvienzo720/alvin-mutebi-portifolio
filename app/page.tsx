@@ -166,7 +166,7 @@ export default function Home() {
         </div>
       </motion.section>
 
-      <motion.section 
+     <motion.section 
         id="certificates" 
         className="neo-brutalist-box bg-background-light dark:bg-background-dark p-8 text-text-light dark:text-text-dark"
         initial={{ opacity: 0 }}
@@ -176,14 +176,14 @@ export default function Home() {
       >
         <h2 className="text-4xl font-bold mb-4 flex items-center"><Award className="mr-2" />Certificates</h2>
         <ul className="list-disc list-inside space-y-2">
-          <li>AWS Certified Cloud Practitioner</li>
-          <li>Google Google Africa Developer Training Program ( Google Cloud )</li>
-          <li>PCEP – Certified Entry-Level Python Programmer</li>
-          <li>Software Engineering Virtual Experience J.P. Morgan Chase & Co</li>
-          <li>Python AWS Blockchain Software Engineering (CODEIT )</li>
-          <li>Responsive Web Design Free Code Camp </li>
-          <li>JavaScript Algorithms and Data Structures</li>
-          <li>Certificate of Participation in Software Testing Bootcamp</li>
+          <li><a href="https://www.credly.com/badges/ce407768-6d21-4918-a03c-80d5c26ef398/public_url" target="_blank" rel="noopener noreferrer" className="hover:text-primary">AWS Certified Cloud Practitioner</a></li>
+          <li><a href="https://adscerts.com/scholar/550A2AB75681B73" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Google Africa Developer Training Program (Google Cloud)</a></li>
+          <li><a href="https://www.credly.com/badges/4ceab31b-6f16-4d93-85cb-29ff06574dcc?source=linked_in_profile" target="_blank" rel="noopener noreferrer" className="hover:text-primary">PCEP – Certified Entry-Level Python Programmer</a></li>
+          <li><a href="https://drive.google.com/file/d/1jiIkqMTquM12-LpH4vlxzYMZS9M-2koK/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Software Engineering Virtual Experience J.P. Morgan Chase & Co</a></li>
+          <li><a href="https://drive.google.com/file/d/13-a3cddjKXF_JcevfY1ndUqjSliBPZ67/view" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Python AWS Blockchain Software Engineering (CODEIT)</a></li>
+          <li><a href="https://www.freecodecamp.org/certification/alvinmutebi/responsive-web-design" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Responsive Web Design Free Code Camp</a></li>
+          <li><a href="https://www.freecodecamp.org/certification/alvinmutebi/javascript-algorithms-and-data-structures" target="_blank" rel="noopener noreferrer" className="hover:text-primary">JavaScript Algorithms and Data Structures</a></li>
+          <li><a href="https://credsverse.com/credentials/76a48830-1274-4a40-bf3b-88348e158539" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Certificate of Participation in Software Testing Bootcamp</a></li>
         </ul>
       </motion.section>
 
