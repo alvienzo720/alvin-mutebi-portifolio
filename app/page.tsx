@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { Github, Linkedin, Mail, Phone } from 'lucide-react'
+import { Github, Linkedin, Mail, Phone, Code, Briefcase, FileText, Send, GraduationCap, Award } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { useState, useRef } from 'react'
 
@@ -21,24 +21,19 @@ export default function Home() {
         body: JSON.stringify(body),
       });
 
-      // Log the full response for debugging
       console.log('Response status:', response.status);
       console.log('Response ok:', response.ok);
 
-      // Parse the response body to get more details
       const responseBody = await response.text();
       console.log('Response body:', responseBody);
 
       if (response.ok) {
         setFormStatus('Message sent successfully!')
-        // Reset form using ref instead of e.currentTarget
         formRef.current?.reset()
       } else {
-        // Log the error response and set a more informative status
         setFormStatus(`Failed to send message. Status: ${response.status}. ${responseBody}`)
       }
     } catch (error) {
-      // Log the actual error for more details
       console.error('Submission error:', error);
       setFormStatus('An error occurred. Please try again later.')
     }
@@ -61,7 +56,7 @@ export default function Home() {
           className="rounded-full neo-brutalist-box mb-8"
         />
         <h1 className="text-6xl font-bold mb-4 bg-primary p-4 neo-brutalist-box text-text-dark">Alvin Mutebi</h1>
-        <p className="text-2xl mb-8 bg-background-light dark:bg-background-dark p-2 neo-brutalist-box text-text-light dark:text-text-dark">Software Developer | Web3 Enthusiast | Blockchain Expert</p>
+        <p className="text-2xl mb-8 bg-background-light dark:bg-background-dark p-2 neo-brutalist-box text-text-light dark:text-text-dark">Software Developer | Web3 Enthusiast | Blockchain Expert | AWS Certified</p>
         <div className="flex space-x-4">
           <a href="https://github.com/alvienzo720" target="_blank" rel="noopener noreferrer" className="text-text-light dark:text-text-dark hover:text-primary">
             <Github size={32} />
@@ -86,12 +81,11 @@ export default function Home() {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-4xl font-bold mb-4">About Me</h2>
+        <h2 className="text-4xl font-bold mb-4 flex items-center"><Code className="mr-2" />About Me</h2>
         <p className="text-lg">
-          I'm a passionate software developer with expertise in Web3, blockchain technologies, and full-stack development. 
-          With a strong background in Python, TypeScript, and Solidity, I've worked on various projects ranging from 
-          trading bots to decentralized applications. I'm always eager to learn and take on new challenges in the 
-          ever-evolving world of technology.
+          I'm a passionate software developer with expertise in Web2, Web3, blockchain technologies, and full-stack development. 
+          With a strong background in Python,Javascript, TypeScript, and Solidity, I've worked on various projects ranging from 
+          APIs to front ends  while handling integrations of APIs to smart contracts for decentralized applications on diffrent protocols like Uniwasp, Celo, Solana, Compound and most EVM compatible chains.
         </p>
       </motion.section>
 
@@ -103,7 +97,7 @@ export default function Home() {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-4xl font-bold mb-4">Work Experience</h2>
+        <h2 className="text-4xl font-bold mb-4 flex items-center"><Briefcase className="mr-2" />Work Experience</h2>
         <div className="space-y-8">
           <div className="neo-brutalist-box bg-primary p-4 text-text-dark">
             <h3 className="text-2xl font-bold">Web3 Trainer</h3>
@@ -119,13 +113,78 @@ export default function Home() {
             <h3 className="text-2xl font-bold">Software Developer</h3>
             <p className="text-lg">Ngeni Labs | January 2023 - August 2024</p>
             <ul className="list-disc list-inside mt-2">
-              <li>Developed efficient trading bot on Bybit using TypeScript, Express, and Node.js</li>
-              <li>Deployed 12+ RESTful APIs using TypeScript, Node.js, Python, and Django</li>
-              <li>Built Telegram bot for Uniswap V3 token operations</li>
-              <li>Implemented 20+ smart contracts on various protocols</li>
+              <li>Developed efficient trading bots using TypeScript, Express, and Node.js</li>
+              <li>Deployed RESTful APIs using TypeScript, Node.js, Python, and Django</li>
+              <li>Handled API integrations to multiple front-ends</li>
+               <li>Wrote unit tests for diffrennt APIs before production</li>
+              <li>Implemented smart contracts on various protocols</li>
+            </ul>
+          </div>
+          <div className="neo-brutalist-box bg-primary p-4 text-text-dark">
+            <h3 className="text-2xl font-bold">Backend Developer</h3>
+            <p className="text-lg">CodeIT Institute of Technology | September 2021 - November 2022</p>
+            <ul className="list-disc list-inside mt-2">
+              <li>Pioneered blockchain-based student database in Python on AWS</li>
+              <li>Implemented various smart contracts for an NFT market place and handled integrations with Next js</li>
+              <li>Administered and maintained vital system databases</li>
+              <li>Streamlined deployment and management of Linux EC2 instances</li>
+            </ul>
+          </div>
+          <div className="neo-brutalist-box bg-primary p-4 text-text-dark">
+            <h3 className="text-2xl font-bold">Full Stack Software Developer</h3>
+            <p className="text-lg">Kuko Store | March 2018 - Jan 2021</p>
+            <ul className="list-disc list-inside mt-2">
+              <li>Developed and deployed Kuko store website and CRM using Python Django Framework</li>
+              <li>Handled API integrations ftom backend to front-ends seamlessly</li>
+              <li>Increased store efficiency using Redis for in-memory data storage and caching</li>
+              <li>Integrated online payments (PayPal and Visa) into websites</li>
             </ul>
           </div>
         </div>
+      </motion.section>
+
+      <motion.section 
+        id="education" 
+        className="neo-brutalist-box bg-primary p-8 text-text-dark"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+      >
+        <h2 className="text-4xl font-bold mb-4 flex items-center"><GraduationCap className="mr-2" />Education</h2>
+        <div className="space-y-4">
+          <div>
+            <h3 className="text-2xl font-bold">CodeIT Institute of Technology</h3>
+            <p>Certificate in Python, Blockchain, AWS</p>
+            <p className="text-sm">September 2021</p>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold">Nkumba University</h3>
+            <p>Bachelor of Information Technology</p>
+            <p className="text-sm">November 2017</p>
+          </div>
+        </div>
+      </motion.section>
+
+      <motion.section 
+        id="certificates" 
+        className="neo-brutalist-box bg-background-light dark:bg-background-dark p-8 text-text-light dark:text-text-dark"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+      >
+        <h2 className="text-4xl font-bold mb-4 flex items-center"><Award className="mr-2" />Certificates</h2>
+        <ul className="list-disc list-inside space-y-2">
+          <li>AWS Certified Cloud Practitioner</li>
+          <li>Google Google Africa Developer Training Program ( Google Cloud )</li>
+          <li>PCEP – Certified Entry-Level Python Programmer</li>
+          <li>Software Engineering Virtual Experience J.P. Morgan Chase & Co</li>
+          <li>Python AWS Blockchain Software Engineering (CODEIT )</li>
+          <li>Responsive Web Design Free Code Camp </li>
+          <li>JavaScript Algorithms and Data Structures</li>
+          <li>Certificate of Participation in Software Testing Bootcamp</li>
+        </ul>
       </motion.section>
 
       <motion.section 
@@ -136,29 +195,51 @@ export default function Home() {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-4xl font-bold mb-4">Projects</h2>
+        <h2 className="text-4xl font-bold mb-4 flex items-center"><FileText className="mr-2" />Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="neo-brutalist-box bg-background-light dark:bg-background-dark p-4 text-text-light dark:text-text-dark">
             <Image
-              src="/placeholder.svg?height=200&width=300"
-              alt="Bybit Trading Bot"
+              src="/Nftminited.jpeg?height=200&width=300"
+              alt="Mintograph"
               width={300}
               height={200}
               className="w-full h-40 object-cover mb-4"
             />
-            <h3 className="text-2xl font-bold mb-2">Bybit Trading Bot</h3>
-            <p>Efficient trading bot developed for Bybit using TypeScript, Express, and Node.js.</p>
+            <h3 className="text-2xl font-bold mb-2">Mintograph NFT bot</h3>
+            <p>Telegram bot developed for EVM using TypeScript, Express, and Node.js. to mint, transfer NFTs</p>
           </div>
           <div className="neo-brutalist-box bg-background-light dark:bg-background-dark p-4 text-text-light dark:text-text-dark">
             <Image
-              src="/placeholder.svg?height=200&width=300"
+              src="/goodstuff.png??height=200&width=300"
               alt="Blockchain Student Database"
               width={300}
               height={200}
               className="w-full h-40 object-cover mb-4"
             />
-            <h3 className="text-2xl font-bold mb-2">Blockchain Student Database</h3>
-            <p>Python-based blockchain solution for secure student data management on AWS.</p>
+            <h3 className="text-2xl font-bold mb-2">Solana Meme Coin Rug Filter</h3>
+            <p>Typescript Project to help meme traders on solana to get best tokens to trade without being rugged</p>
+          </div>
+          <div className="neo-brutalist-box bg-background-light dark:bg-background-dark p-4 text-text-light dark:text-text-dark">
+            <Image
+              src="/tekeka.png?height=200&width=300"
+              alt="Uniswap V3 Telegram Bot"
+              width={300}
+              height={200}
+              className="w-full h-40 object-cover mb-4"
+            />
+            <h3 className="text-2xl font-bold mb-2">Teleka Sacco Manger version 2.0 </h3>
+            <p>This is a project built on SAAS Python Django Framework to help manage small Savings And Credit Cooperatives handle their records keeping on the go without difficulty</p>
+          </div>
+          <div className="neo-brutalist-box bg-background-light dark:bg-background-dark p-4 text-text-light dark:text-text-dark">
+            <Image
+              src="/ekibanna.png?height=200&width=300"
+              alt="Kuko Store E-commerce Platform"
+              width={300}
+              height={200}
+              className="w-full h-40 object-cover mb-4"
+            />
+            <h3 className="text-2xl font-bold mb-2">Ekibna BAckend API DJango RESTful</h3>
+            <p>Backend API For Ekibiina Group App which aims at reducing physical records keeping among savings groups</p>
           </div>
         </div>
       </motion.section>
@@ -171,7 +252,7 @@ export default function Home() {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-4xl font-bold mb-4">Contact Me</h2>
+        <h2 className="text-4xl font-bold mb-4 flex items-center"><Send className="mr-2" />Contact Me</h2>
         <form 
           ref={formRef} 
           className="space-y-4" 
