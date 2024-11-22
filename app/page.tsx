@@ -199,7 +199,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="neo-brutalist-box bg-background-light dark:bg-background-dark p-4 text-text-light dark:text-text-dark">
             <Image
-              src="/Nftminited.jpeg?height=200&width=300"
+              src="/NFTminited.jpeg?height=200&width=300"
               alt="Mintograph"
               width={300}
               height={200}
