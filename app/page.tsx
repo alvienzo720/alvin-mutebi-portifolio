@@ -227,7 +227,7 @@ export default function Home() {
               height={200}
               className="w-full h-40 object-cover mb-4"
             />
-            <h3 className="text-2xl font-bold mb-2">Teleka Sacco Manger version 2.0 </h3>
+            <h3 className="text-2xl font-bold mb-2">Teleka Sacco Manager version 2.0 </h3>
             <p>This is a project built on SAAS Python Django Framework to help manage small Savings And Credit Cooperatives handle their record-keeping on the go without difficulty</p>
           </div>
           <div className="neo-brutalist-box bg-background-light dark:bg-background-dark p-4 text-text-light dark:text-text-dark">
@@ -238,7 +238,7 @@ export default function Home() {
               height={200}
               className="w-full h-40 object-cover mb-4"
             />
-            <h3 className="text-2xl font-bold mb-2">Ekibna BAckend API DJango RESTful</h3>
+            <h3 className="text-2xl font-bold mb-2">Ekibna Backend API DJango RESTFUL</h3>
             <p>Backend API for the Ekibiina Group App, which aims at reducing physical records keeping among savings groups</p>
           </div>
         </div>
