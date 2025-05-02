@@ -58,7 +58,7 @@ export default function RootLayout({
           {children}
         </main>
         <footer className="bg-primary text-text-dark p-6 text-center">
-          <p className="font-bold">&copy; 2024 Alvin Mutebi. All rights reserved.</p>
+          <p className="font-bold">&copy; 2025 Alvin Mutebi. All rights reserved.</p>
         </footer>
       </body>
     </html>
