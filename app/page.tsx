@@ -84,8 +84,8 @@ export default function Home() {
         <h2 className="text-4xl font-bold mb-4 flex items-center"><Code className="mr-2" />About Me</h2>
         <p className="text-lg">
           I'm a passionate software developer with expertise in Web2, Web3, blockchain technologies, and full-stack development. 
-          With a strong background in Python,Javascript, TypeScript, and Solidity, I've worked on various projects ranging from 
-          APIs to front ends  while handling integrations of APIs to smart contracts for decentralized applications on diffrent protocols like Uniwasp, Celo, Solana, Compound and most EVM compatible chains.
+          With a strong background in Python, JavaScript, TypeScript, and Solidity, I've worked on various projects ranging from 
+          APIs to front ends  while handling integrations of APIs to smart contracts for decentralised applications on different protocols like Uniwasp, Celo, Solana, Compound and most EVM compatible chains.
         </p>
       </motion.section>
 
@@ -113,10 +113,10 @@ export default function Home() {
             <h3 className="text-2xl font-bold">Software Developer</h3>
             <p className="text-lg">Ngeni Labs | January 2023 - August 2024</p>
             <ul className="list-disc list-inside mt-2">
-              <li>Developed efficient trading bots using TypeScript, Express, and Node.js</li>
+              <li>Developed efficient trading bots using TypeScript, Express, and Node.js </li>
               <li>Deployed RESTful APIs using TypeScript, Node.js, Python, and Django</li>
               <li>Handled API integrations to multiple front-ends</li>
-               <li>Wrote unit tests for diffrennt APIs before production</li>
+               <li>Wrote unit tests for different APIs before production</li>
               <li>Implemented smart contracts on various protocols</li>
             </ul>
           </div>
@@ -135,7 +135,7 @@ export default function Home() {
             <p className="text-lg">Kuko Store | March 2018 - Jan 2021</p>
             <ul className="list-disc list-inside mt-2">
               <li>Developed and deployed Kuko store website and CRM using Python Django Framework</li>
-              <li>Handled API integrations ftom backend to front-ends seamlessly</li>
+              <li>Handled API integrations from backend to front-ends seamlessly</li>
               <li>Increased store efficiency using Redis for in-memory data storage and caching</li>
               <li>Integrated online payments (PayPal and Visa) into websites</li>
             </ul>
@@ -217,7 +217,7 @@ export default function Home() {
               className="w-full h-40 object-cover mb-4"
             />
             <h3 className="text-2xl font-bold mb-2">Solana Meme Coin Rug Filter</h3>
-            <p>Typescript Project to help meme traders on solana to get best tokens to trade without being rugged</p>
+            <p>Typescript Project to help meme traders on Solana to get the best tokens to trade without being rugged</p>
           </div>
           <div className="neo-brutalist-box bg-background-light dark:bg-background-dark p-4 text-text-light dark:text-text-dark">
             <Image
@@ -228,7 +228,7 @@ export default function Home() {
               className="w-full h-40 object-cover mb-4"
             />
             <h3 className="text-2xl font-bold mb-2">Teleka Sacco Manger version 2.0 </h3>
-            <p>This is a project built on SAAS Python Django Framework to help manage small Savings And Credit Cooperatives handle their records keeping on the go without difficulty</p>
+            <p>This is a project built on SAAS Python Django Framework to help manage small Savings And Credit Cooperatives handle their record-keeping on the go without difficulty</p>
           </div>
           <div className="neo-brutalist-box bg-background-light dark:bg-background-dark p-4 text-text-light dark:text-text-dark">
             <Image
@@ -239,7 +239,7 @@ export default function Home() {
               className="w-full h-40 object-cover mb-4"
             />
             <h3 className="text-2xl font-bold mb-2">Ekibna BAckend API DJango RESTful</h3>
-            <p>Backend API For Ekibiina Group App which aims at reducing physical records keeping among savings groups</p>
+            <p>Backend API for the Ekibiina Group App, which aims at reducing physical records keeping among savings groups</p>
           </div>
         </div>
       </motion.section>
