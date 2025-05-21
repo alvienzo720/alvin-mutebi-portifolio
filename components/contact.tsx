@@ -129,7 +129,7 @@ export default function Contact() {
                           href="mailto:alvin@example.com"
                           className="text-gray-400 hover:text-white transition-colors"
                         >
-                          alvin@example.com
+                          mutebialvinalvienzo@gmail.com
                         </a>
                       </div>
                     </motion.div>
@@ -144,10 +144,10 @@ export default function Contact() {
                       <div>
                         <h4 className="font-medium text-lg mb-1">Phone</h4>
                         <a
-                          href="tel:+11234567890"
+                          href="tel:+256755994742"
                           className="text-gray-400 hover:text-white transition-colors"
                         >
-                          +1 (123) 456-7890
+                          +(256)755994742
                         </a>
                       </div>
                     </motion.div>
@@ -161,9 +161,7 @@ export default function Contact() {
                       </div>
                       <div>
                         <h4 className="font-medium text-lg mb-1">Location</h4>
-                        <p className="text-gray-400">
-                          San Francisco, California
-                        </p>
+                        <p className="text-gray-400">Uganda</p>
                       </div>
                     </motion.div>
                   </div>
@@ -177,22 +175,17 @@ export default function Contact() {
                         {
                           name: "GitHub",
                           icon: "github",
-                          url: "https://github.com",
+                          url: "https://github.com/alvienzo720/",
                         },
                         {
                           name: "LinkedIn",
                           icon: "linkedin",
-                          url: "https://linkedin.com",
+                          url: "https://www.linkedin.com/in/alvin-mutebi-a5356815b/",
                         },
                         {
                           name: "Twitter",
                           icon: "twitter",
-                          url: "https://twitter.com",
-                        },
-                        {
-                          name: "Instagram",
-                          icon: "instagram",
-                          url: "https://instagram.com",
+                          url: "https://x.com/Code__bruh",
                         },
                       ].map((social) => (
                         <a
