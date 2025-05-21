@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export default function Speaking() {
   const ref = useRef(null);
@@ -416,7 +417,7 @@ export default function Speaking() {
                         <div
                           className={`absolute inset-0 bg-gradient-to-br ${event.color} opacity-20`}
                         ></div>
-                        <img
+                        <Image
                           src={event.image || "/placeholder.svg"}
                           alt={event.title}
                           className="w-full h-full object-cover"

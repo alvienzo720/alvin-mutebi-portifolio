@@ -7,7 +7,15 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
-import { Mail, MapPin, Phone, Send, CheckCircle, Loader2 } from "lucide-react";
+import {
+  Mail,
+  MapPin,
+  Phone,
+  Send,
+  CheckCircle,
+  Loader2,
+  AlertCircle,
+} from "lucide-react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -19,6 +27,7 @@ export default function Contact() {
   const [formState, setFormState] = useState<
     "idle" | "submitting" | "success" | "error"
   >("idle");
+  const [errorMessage, setErrorMessage] = useState("");
   const formRef = useRef(null);
   const isInView = useInView(formRef, { once: true, margin: "-100px" });
 
@@ -29,21 +38,51 @@ export default function Contact() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setFormState("submitting");
 
-    // Simulate form submission
-    setTimeout(() => {
-      console.log(formData);
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || "Something went wrong");
+      }
+
       setFormData({ name: "", email: "", subject: "", message: "" });
       setFormState("success");
 
       // Reset to idle after showing success
       setTimeout(() => {
         setFormState("idle");
-      }, 3000);
-    }, 1500);
+      }, 5000);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setErrorMessage(
+        error instanceof Error
+          ? error.message
+          : "Failed to send message. Please try again."
+      );
+      setFormState("error");
+
+      // Reset to idle after showing error
+      setTimeout(() => {
+        setFormState("idle");
+      }, 5000);
+    }
   };
 
   const containerVariants = {
@@ -126,7 +165,7 @@ export default function Contact() {
                       <div>
                         <h4 className="font-medium text-lg mb-1">Email</h4>
                         <a
-                          href="mailto:alvin@example.com"
+                          href="mailto:mutebialvinalvienzo@gmail.com"
                           className="text-gray-400 hover:text-white transition-colors"
                         >
                           mutebialvinalvienzo@gmail.com
@@ -277,6 +316,19 @@ export default function Contact() {
                       <p className="text-gray-400 text-center max-w-md">
                         Thank you for reaching out. I'll get back to you as soon
                         as possible.
+                      </p>
+                    </div>
+                  ) : formState === "error" ? (
+                    <div className="flex flex-col items-center justify-center py-12">
+                      <div className="w-16 h-16 bg-red-500/10 rounded-full flex items-center justify-center mb-4">
+                        <AlertCircle className="h-8 w-8 text-red-500" />
+                      </div>
+                      <h4 className="text-xl font-bold mb-2">
+                        Error Sending Message
+                      </h4>
+                      <p className="text-gray-400 text-center max-w-md">
+                        {errorMessage ||
+                          "Something went wrong. Please try again later."}
                       </p>
                     </div>
                   ) : (
