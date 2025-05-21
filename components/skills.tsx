@@ -35,7 +35,6 @@ export default function Skills() {
         "HTML5/CSS3",
         "Tailwind CSS",
         "Redux",
-        "Framer Motion",
       ],
     },
     {
@@ -43,6 +42,8 @@ export default function Skills() {
       name: "Backend",
       icon: <Server className="h-6 w-6" />,
       skills: [
+        "Python",
+        "Solidity",
         "Node.js",
         "Express",
         "GraphQL",
@@ -66,19 +67,6 @@ export default function Skills() {
       ],
     },
     {
-      id: "design",
-      name: "Design",
-      icon: <Paintbrush className="h-6 w-6" />,
-      skills: [
-        "Figma",
-        "UI/UX",
-        "Responsive Design",
-        "Design Systems",
-        "Accessibility",
-        "Animation",
-      ],
-    },
-    {
       id: "devops",
       name: "DevOps",
       icon: <Cloud className="h-6 w-6" />,
@@ -88,6 +76,8 @@ export default function Skills() {
         "CI/CD",
         "Docker",
         "AWS",
+        "GCP",
+        "AZURE",
         "Vercel",
         "Netlify",
       ],
