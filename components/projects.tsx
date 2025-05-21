@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export default function Projects() {
   const ref = useRef(null);
@@ -23,44 +24,65 @@ export default function Projects() {
 
   const projects = [
     {
-      title: "E-Commerce Platform",
+      title: "NMS",
       description:
-        "A full-featured e-commerce platform with payment integration, user authentication, and admin dashboard. Built with performance and scalability in mind.",
-      image: "/placeholder.svg?height=600&width=800",
-      tags: ["Next.js", "TypeScript", "Tailwind CSS", "Stripe", "Supabase"],
-      github: "https://github.com",
-      demo: "https://example.com",
+        "A web-based platform for visualizing and managing professional relationships. Enables organizations to track companies/contacts, map direct/indirect connections, and request warm introductions via interactive dashboards. Features include relationship-strength analytics, CRM/LinkedIn integrations, and automated introduction workflows.",
+      image: "/getway.png",
+      tags: ["Next.js", "TypeScript", "Tailwind CSS", "Python", "Django"],
+      github: "https://github.com/alvienzo720/nms",
+      demo: "https://github.com/alvienzo720/nms",
+      color: "from-purple-500 to-pink-500",
+    },
+    // {
+    //   title: "Solan Meme Coin Rug Filter",
+    //   description:
+    //     "An AI-powered application that generates content based on user prompts using OpenAI's GPT models. Features include content history, export options, and customization.",
+    //   image: "/placeholder.svg?height=600&width=800",
+    //   tags: ["React", "Node.js", "OpenAI API", "MongoDB", "Express"],
+    //   github: "https://github.com",
+    //   demo: "https://example.com",
+    //   color: "from-cyan-500 to-blue-500",
+    // },
+    {
+      title: "Teleka Sacco Manager version 2.0",
+      description:
+        "Teleka Sacco Manger version 2.0 , This is a project built on SAAS Python Django Framework to help manage small Savings And Credit Cooperatives handle their records keeping on the go without difficulty",
+      image: "/teleeka.png",
+      tags: ["Python", "AWS", "Bootstrap", "HTML", "CSS", "Django"],
+      github: "https://github.com/alvienzo720/Teleka_V2",
+      demo: "https://github.com/alvienzo720/Teleka_V2",
+      color: "from-emerald-500 to-teal-500",
+    },
+    // {
+    //   title: "Ekibna Backend API DJango RESTFUL",
+    //   description:
+    //     "A comprehensive task management system with drag-and-drop interface, team collaboration, and analytics. Includes calendar view and progress tracking.",
+    //   image: "/placeholder.svg?height=600&width=800",
+    //   tags: ["Vue.js", "Vuex", "Node.js", "PostgreSQL", "Chart.js"],
+    //   github: "https://github.com",
+    //   demo: "https://example.com",
+    //   color: "from-amber-500 to-orange-500",
+    // },
+    {
+      title: "Mintograph NFT bot",
+      description:
+        "Mintograph is an innovative Telegram bot that allows users to mint their own NFTs directly from the Telegram interface. By harnessing the power of Ethereum and the convenience of Telegram, Mintograph offers a user-friendly way for individuals to generate and manage NFTs with just a few simple commands.",
+
+      image: "/minotgraph.png",
+      tags: ["TypeScript", "Nodejs", "Telegram API"],
+      github: "https://github.com/alvienzo720/mintograph",
+      demo: "https://github.com/alvienzo720/mintograph",
       color: "from-purple-500 to-pink-500",
     },
     {
-      title: "AI Content Generator",
+      title: "Hermes Solana Liquidity Simulator",
       description:
-        "An AI-powered application that generates content based on user prompts using OpenAI's GPT models. Features include content history, export options, and customization.",
-      image: "/placeholder.svg?height=600&width=800",
-      tags: ["React", "Node.js", "OpenAI API", "MongoDB", "Express"],
-      github: "https://github.com",
-      demo: "https://example.com",
+        "The Hermes Solana Liquidity Simulator is a cutting-edge tool designed to simulate liquidity provision on the Solana blockchain. It offers users a risk-free environment to explore and understand the complexities of liquidity pools, including impermanent loss and yield farming strategies. By leveraging this simulator, users can make informed decisions to optimize their liquidity provision strategies on Solana.",
+      image: "/hermessim.png",
+      tags: ["Nextjs", "Node.js", "MeteoraAPI", "MongoDB", "Django", "Python"],
+      github: "https://github.com/alvienzo720/Hermes-Sim",
+      demo: "https://github.com/alvienzo720/Hermes-Sim",
       color: "from-cyan-500 to-blue-500",
-    },
-    {
-      title: "Real-time Chat Application",
-      description:
-        "A real-time messaging platform with features like typing indicators, read receipts, and file sharing. Supports group chats and direct messages.",
-      image: "/placeholder.svg?height=600&width=800",
-      tags: ["React", "Firebase", "WebSockets", "Styled Components"],
-      github: "https://github.com",
-      demo: "https://example.com",
-      color: "from-emerald-500 to-teal-500",
-    },
-    {
-      title: "Task Management Dashboard",
-      description:
-        "A comprehensive task management system with drag-and-drop interface, team collaboration, and analytics. Includes calendar view and progress tracking.",
-      image: "/placeholder.svg?height=600&width=800",
-      tags: ["Vue.js", "Vuex", "Node.js", "PostgreSQL", "Chart.js"],
-      github: "https://github.com",
-      demo: "https://example.com",
-      color: "from-amber-500 to-orange-500",
     },
   ];
 
@@ -72,7 +94,7 @@ export default function Projects() {
     setActiveIndex((prev) => (prev === 0 ? projects.length - 1 : prev - 1));
   };
 
-  const goToProject = (index:number) => {
+  const goToProject = (index: number) => {
     setActiveIndex(index);
   };
 
@@ -120,7 +142,9 @@ export default function Projects() {
                             transition={{ duration: 0.7 }}
                             className="h-full"
                           >
-                            <img
+                            <Image
+                              width={800}
+                              height={600}
                               src={project.image || "/placeholder.svg"}
                               alt={project.title}
                               className="w-full h-full object-cover"
@@ -254,7 +278,7 @@ export default function Projects() {
               {
                 icon: <Github className="h-6 w-6" />,
                 label: "GitHub Repositories",
-                value: "40+",
+                value: "100+",
               },
               {
                 icon: <Eye className="h-6 w-6" />,
