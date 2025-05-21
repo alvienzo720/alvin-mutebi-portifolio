@@ -77,9 +77,9 @@ export default function About() {
                 icon: <Code className="h-10 w-10 text-cyan-500" />,
               },
               {
-                title: "Fast Learner",
+                title: "Coachable",
                 description:
-                  "I quickly adapt to new technologies and methodologies.",
+                  "I am open to learning from others adapt to new technologies and methodologies.",
                 icon: <Zap className="h-10 w-10 text-emerald-500" />,
               },
               {
