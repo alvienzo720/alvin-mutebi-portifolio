@@ -7,12 +7,10 @@ import { Button } from "@/components/ui/button";
 import {
   Calendar,
   MapPin,
-  ExternalLink,
   ChevronLeft,
   ChevronRight,
   Presentation,
   Mic,
-  Video,
   Users,
 } from "lucide-react";
 import Link from "next/link";
@@ -27,69 +25,79 @@ export default function Speaking() {
 
   const events = [
     {
-      title: "Modern Frontend Architecture",
-      conference: "TechConf 2023",
-      date: "October 15, 2023",
-      location: "San Francisco, CA",
-      image: "/placeholder.svg?height=600&width=800",
-      slides: "https://example.com/slides",
-      recording: "https://example.com/recording",
+      title: "Integration of coding and blockchain",
+      conference: "Polkadot Kampala Meetup",
+      date: "May 17, 2025",
+      location: "Kampala, Uganda",
+      image: "/polkadot2025.jpg",
+      slides:
+        "https://www.canva.com/design/DAGnoI0gcYU/iYykjLhdcBWGTSYDGqRyqA/edit?utm_content=DAGnoI0gcYU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
       description:
-        "Explored cutting-edge frontend architecture patterns, state management strategies, and performance optimization techniques for modern web applications.",
-      attendees: 350,
+        "Integration of coding and blockchain, with a special emphasis on Polkadot Polkadot Blockchain",
+      attendees: 40,
       color: "from-purple-500 to-pink-500",
     },
     {
-      title: "Building Scalable APIs with Node.js",
-      conference: "DevSummit 2023",
-      date: "August 22, 2023",
-      location: "New York, NY",
-      image: "/placeholder.svg?height=600&width=800",
-      slides: "https://example.com/slides",
-      recording: "https://example.com/recording",
+      title: "Introduction to Web3",
+      conference: "Google Devfest",
+      date: "December 17, 2024",
+      location: "Kampala Uganda",
+      image: "/GoogleDevfest.jpg",
+      slides:
+        "https://www.canva.com/design/DAGY-RXCSbM/chACenXbMl5wz_sfoqFj-Q/edit?utm_content=DAGY-RXCSbM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
       description:
-        "Discussed strategies for designing and implementing scalable, maintainable API services using Node.js, Express, and modern backend practices.",
-      attendees: 280,
+        "I had the opportunity to share my insights on the future of the web and the transformative potential of Web 3.0 technologies. The level of engagement and thoughtful questions from the audience were truly inspiring.",
+      attendees: 807,
       color: "from-cyan-500 to-blue-500",
     },
     {
-      title: "The Future of Web Development",
-      conference: "WebCon 2023",
-      date: "June 10, 2023",
-      location: "London, UK",
-      image: "/placeholder.svg?height=600&width=800",
-      slides: "https://example.com/slides",
-      recording: "https://example.com/recording",
+      title: "Panelist How Web3 is shaping technology using PolkaDot",
+      conference: "Kampala Polkadot Meetup",
+      date: "May 25, 2024",
+      location: "Kampala Uganda",
+      image: "/PolkaDotKampala1.jpg",
+      slides: "#",
       description:
-        "Presented insights on emerging web technologies, frameworks, and methodologies that are shaping the future of web development.",
-      attendees: 420,
+        "Talked about how crow sourcing and DAOs are helping the polkadot ecosystem thrive and also how developers can join the wagon to build exciting projects",
+      attendees: 71,
       color: "from-emerald-500 to-teal-500",
     },
     {
-      title: "AI Integration in Modern Applications",
-      conference: "AI Summit 2023",
-      date: "April 5, 2023",
-      location: "Berlin, Germany",
-      image: "/placeholder.svg?height=600&width=800",
-      slides: "https://example.com/slides",
-      recording: "https://example.com/recording",
+      title: "Introduction to Web3",
+      conference: "ICPCC Kampala Meetup",
+      date: "May, 10, 2024",
+      location: "Kampala Uganda",
+      image: "/intoToWeb3ICP.jpg",
+      slides:
+        "https://www.canva.com/design/DAGEpIz7HyU/0GEC7hGWB4tpsIL-yDNBag/edit?utm_content=DAGEpIz7HyU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
       description:
-        "Explored practical approaches to integrating AI capabilities into web and mobile applications, with live demonstrations and case studies.",
-      attendees: 310,
+        "Spoke about the transformative power of Web3 to the vibrant ICPCC community at Innovation Village in Kampala.During the session, we explored how Web3 is revolutionizing the Internet by decentralizing applications",
+      attendees: 53,
       color: "from-amber-500 to-orange-500",
     },
     {
-      title: "Optimizing React Performance",
-      conference: "ReactConf 2022",
+      title: "Host And Panelist Code 3 Camp Byte Battle Royal Hackathon",
+      conference: "𝗕𝘆𝘁𝗲 𝗕𝗮𝘁𝘁𝗹𝗲 𝗥𝗼𝘆𝗮𝗹 𝗖𝗵𝗮𝗹𝗹𝗲𝗻𝗴𝗲 - 𝗞𝗮𝗺𝗽𝗮𝗹𝗮 𝗘𝗱𝗶𝘁𝗶𝗼𝗻🚀",
       date: "November 12, 2022",
-      location: "Austin, TX",
-      image: "/placeholder.svg?height=600&width=800",
-      slides: "https://example.com/slides",
-      recording: "https://example.com/recording",
+      location: "Kampala Uganda",
+      image: "/code3CampHackerthon.png",
+      slides: "#",
       description:
-        "Shared advanced techniques for optimizing React applications, including code splitting, memoization, and rendering strategies.",
-      attendees: 380,
+        "Guided and hosted developers competing for a prize building both web3 and web3 applications for the set tracks",
+      attendees: 28,
       color: "from-red-500 to-pink-500",
+    },
+    {
+      title: "Introduction to Code3 Camps",
+      conference: "Celeo Kampala Meetup",
+      date: "February 24, 2024",
+      location: "Kampala Uganda",
+      image: "/Code3Camp1.jpg",
+      slides: "#",
+      description:
+        "I introduced code3Camp a web2 and web3 six month coding bootcamp and its benefits to developers.",
+      attendees: 807,
+      color: "from-cyan-500 to-blue-500",
     },
   ];
 
@@ -200,10 +208,12 @@ export default function Speaking() {
                                 transition={{ duration: 0.7 }}
                                 className="h-full"
                               >
-                                <img
+                                <Image
                                   src={event.image || "/placeholder.svg"}
                                   alt={event.title}
                                   className="w-full h-full object-cover"
+                                  height={600}
+                                  width={800}
                                 />
                               </motion.div>
                               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
@@ -276,19 +286,6 @@ export default function Speaking() {
                                     Slides
                                   </Link>
                                 </Button>
-                                <Button
-                                  asChild
-                                  className={`bg-gradient-to-r ${event.color} hover:opacity-90 gap-2`}
-                                >
-                                  <Link
-                                    href={event.recording}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                  >
-                                    <Video className="h-4 w-4" /> Watch
-                                    Recording
-                                  </Link>
-                                </Button>
                               </motion.div>
                             </div>
                           </div>
@@ -346,17 +343,17 @@ export default function Speaking() {
                   {
                     icon: <Users className="h-6 w-6" />,
                     label: "Total Audience",
-                    value: "5,000+",
+                    value: "2,000+",
                   },
                   {
                     icon: <MapPin className="h-6 w-6" />,
-                    label: "Cities",
+                    label: "Locations",
                     value: "8",
                   },
                   {
                     icon: <Presentation className="h-6 w-6" />,
                     label: "Presentations",
-                    value: "20+",
+                    value: "10+",
                   },
                 ].map((stat, i) => (
                   <motion.div
@@ -421,6 +418,8 @@ export default function Speaking() {
                           src={event.image || "/placeholder.svg"}
                           alt={event.title}
                           className="w-full h-full object-cover"
+                          height={600}
+                          width={800}
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
 
@@ -460,19 +459,6 @@ export default function Speaking() {
                               rel="noopener noreferrer"
                             >
                               <Presentation className="h-3 w-3" /> Slides
-                            </Link>
-                          </Button>
-                          <Button
-                            asChild
-                            size="sm"
-                            className={`bg-gradient-to-r ${event.color} hover:opacity-90 gap-1`}
-                          >
-                            <Link
-                              href={event.recording}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              <ExternalLink className="h-3 w-3" /> Recording
                             </Link>
                           </Button>
                         </div>
