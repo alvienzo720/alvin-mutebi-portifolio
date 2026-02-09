@@ -1,11 +1,11 @@
 export default function Experience() {
   const experiences = [
     {
-      role: "Software Engineer",
+      role: "Software Developer",
       company: "Ajibu Virtual Academy",
       period: "2025 - Present",
       description:
-        "I lead the engineering team building Ajibu Virtual Academy, an edtech solution that bridges the education accessibility gap. We're creating a scalable platform that matches students with tutors efficiently, reducing traditional tutoring costs by 30% while ensuring quality educational outcomes through our proprietary matching and scheduling system.",
+        "I lead the development team building Ajibu Virtual Academy, an edtech solution that bridges the education accessibility gap. We're creating a scalable platform that matches students with tutors efficiently, reducing traditional tutoring costs by 30% while ensuring quality educational outcomes through our proprietary matching and scheduling system.",
       highlights: [
         "Next js",
         "Typescript",
@@ -17,7 +17,7 @@ export default function Experience() {
       ],
     },
     {
-      role: "Software Engineer",
+      role: "Software Developer",
       company: "Ngeni Labs",
       period: "2023 - 2025",
       description:
